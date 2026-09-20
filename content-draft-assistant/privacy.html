@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Content Draft Assistant</title>
+<style>
+  :root { --ink:#1c1f3a; --muted:#5b6180; --bg:#f7f8fc; --accent:#00b48a; }
+  body { margin:0; font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         color:var(--ink); background:var(--bg); }
+  .wrap { max-width:720px; margin:0 auto; padding:64px 24px 80px; }
+  h1 { font-size:1.8rem; margin:0 0 6px; letter-spacing:-.02em; }
+  .eff { color:var(--muted); font-size:.9rem; margin:0 0 36px; }
+  h2 { font-size:1.05rem; margin:32px 0 8px; }
+  ul { padding-left:20px; } li { margin:5px 0; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid #e6e8f0; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Privacy Policy</h1>
+  <p class="eff">Content Draft Assistant &nbsp;·&nbsp; Last updated: see footer</p>
+
+  <p>Content Draft Assistant ("the tool") is a content management utility that helps a creator
+  move their own finished video files into their own TikTok draft inbox. This policy describes
+  exactly what the tool handles.</p>
+
+  <h2>What the tool accesses</h2>
+  <ul>
+    <li><strong>TikTok account identity.</strong> With the <code>user.info.basic</code> scope, the
+    tool reads the basic identity of the account that explicitly authorizes it, so it can confirm
+    which account it is acting for.</li>
+    <li><strong>OAuth tokens.</strong> The tool stores the access and refresh tokens issued when the
+    creator authorizes it, so it can act for that creator without asking again each time.</li>
+    <li><strong>Video files.</strong> Only files the creator supplies to the tool.</li>
+  </ul>
+
+  <h2>What the tool does not access</h2>
+  <ul>
+    <li>It does not scrape TikTok or any other platform.</li>
+    <li>It does not read data belonging to other TikTok users.</li>
+    <li>It does not read the creator's messages, followers, or analytics unless separately authorized.</li>
+    <li>It does not perform automated engagement of any kind.</li>
+  </ul>
+
+  <h2>How data is stored</h2>
+  <ul>
+    <li>OAuth tokens are stored locally on the operator's own machine, in a local state file.</li>
+    <li>Video files remain local until they are transferred to the creator's own TikTok draft inbox.</li>
+    <li>No TikTok user data is sold, rented, or shared with third parties.</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <p>The tool transmits data only to TikTok's official API endpoints, and only the data required to
+  place the creator's own video into their own draft inbox. It does not send data to advertisers,
+  brokers, or analytics providers.</p>
+
+  <h2>Retention and deletion</h2>
+  <ul>
+    <li>A creator can revoke the tool's access at any time in TikTok's settings, under
+    <em>Security &amp; permissions → Manage app permissions</em>.</li>
+    <li>Deleting the local state file removes the stored tokens.</li>
+    <li>Videos already uploaded to TikTok are managed through the creator's own TikTok account.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>The tool is not directed to children and is not intended for use by anyone below the minimum
+  age required to hold a TikTok account.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version will be posted on this page with a revised date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:humantics@taiosborne.com">humantics@taiosborne.com</a></p>
+
+  <footer>
+    <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a>
+  </footer>
+
+</div>
+</body>
+</html>
