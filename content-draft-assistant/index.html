@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Draft Assistant</title>
+<style>
+  :root { --ink:#1c1f3a; --muted:#5b6180; --bg:#f7f8fc; --accent:#00b48a; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         color:var(--ink); background:var(--bg); }
+  .wrap { max-width:720px; margin:0 auto; padding:64px 24px 80px; }
+  h1 { font-size:2rem; margin:0 0 8px; letter-spacing:-.02em; }
+  .tag { color:var(--muted); font-size:1.05rem; margin:0 0 40px; }
+  h2 { font-size:1.1rem; margin:36px 0 10px; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  a { color:var(--accent); }
+  .card { background:#fff; border:1px solid #e6e8f2; border-radius:12px; padding:24px 28px; }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid #e6e8f0; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Content Draft Assistant</h1>
+  <p class="tag">A content management tool for creators.</p>
+
+  <div class="card">
+    <p>Content Draft Assistant takes video files that a creator has already produced and uploads
+    them to that creator's own TikTok <strong>draft inbox</strong> using the official TikTok
+    Content Posting API in Upload mode.</p>
+
+    <p>The creator then opens TikTok, reviews the draft, edits it if needed, and publishes it
+    themselves. <strong>The assistant never publishes on the creator's behalf.</strong></p>
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Transfers the creator's own finished videos into their own draft inbox.</li>
+    <li>Identifies the authorized account via the <code>user.info.basic</code> scope.</li>
+    <li>Requires the creator to review and post manually inside TikTok.</li>
+  </ul>
+
+  <h2>What it does not do</h2>
+  <ul>
+    <li>It does not publish automatically. Direct Post is not used.</li>
+    <li>It does not scrape TikTok or read other users' data.</li>
+    <li>It does not follow, like, comment, or message — there is no engagement automation.</li>
+    <li>It does not source or republish content from other accounts.</li>
+  </ul>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+
+</div>
+</body>
+</html>
