@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Thank You — Tai Osborne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080806;
+    --surface: #0f0f0c;
+    --border: #2a2a24;
+    --text: #e2ddd3;
+    --text-muted: #7a7a6e;
+    --text-dim: #4a4a42;
+    --gold: #c4a45a;
+    --gold-dim: #8a7240;
+    --teal: #6aab96;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Syne', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+  }
+  .wrap { max-width: 640px; width: 100%; }
+  .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.6rem;
+  }
+  .label::before { content: "✦ "; color: var(--gold); }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(2.6rem, 7vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.2rem;
+  }
+  h1 em { color: var(--gold); font-style: italic; }
+  .lede {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 52ch;
+    margin-bottom: 3rem;
+  }
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold-dim), transparent);
+    margin: 2.5rem 0;
+    border: none;
+  }
+  .step {
+    display: flex;
+    gap: 1.4rem;
+    padding: 1.4rem 0;
+    align-items: baseline;
+  }
+  .step + .step { border-top: 1px solid var(--border); }
+  .step-num {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    flex-shrink: 0;
+    min-width: 2.2rem;
+  }
+  .step h3 {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.35rem;
+  }
+  .step p { color: var(--text-muted); font-size: 0.9rem; }
+  .back {
+    display: inline-block;
+    margin-top: 3rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 0.9rem 1.8rem;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+  }
+  .back:hover { border-color: var(--gold); color: var(--gold); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="label">Booking Confirmed</p>
+    <h1>You&rsquo;re in.<br><em>The work starts now.</em></h1>
+    <p class="lede">Your session is booked and your calendar invite is on its way. Here&rsquo;s exactly what happens between now and the moment we talk.</p>
+
+    <div class="divider"></div>
+
+    <div class="step">
+      <span class="step-num">01</span>
+      <div>
+        <h3>Your calendar invite is already in your inbox</h3>
+        <p>From Calendly, with the video link attached. It goes on your calendar the moment you booked.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-num">02</span>
+      <div>
+        <h3>A short prep brief arrives within 24 hours</h3>
+        <p>From humantics@taiosborne.com &mdash; three questions, ten minutes. No homework you&rsquo;ll hate. It just makes our 90 minutes actually count.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-num">03</span>
+      <div>
+        <h3>Show up with the thing you&rsquo;re stuck on</h3>
+        <p>The opportunity, the half-built idea, the &ldquo;should I build, buy, or bolt it on?&rdquo; question. You&rsquo;ll leave with a clear next step, not a 40-page deck.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="lede" style="margin-bottom:0; font-size: 0.9rem;">Need to move it? Reply to your confirmation email and we&rsquo;ll find a new time. No forms, no friction.</p>
+
+    <a class="back" href="https://taiosborne.com">&larr; Back to taiosborne.com</a>
+  </div>
+</body>
+</html>
