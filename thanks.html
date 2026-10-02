@@ -90,6 +90,34 @@
     margin-bottom: 0.35rem;
   }
   .step p { color: var(--text-muted); font-size: 0.9rem; }
+  .prep-form { margin-top: 1rem; text-align: left; }
+  .prep-form h2 {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .prep-form .prep-sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.6rem; }
+  .prep-form input, .prep-form textarea {
+    width: 100%; background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); font-family: var(--sans); font-size: 0.95rem;
+    padding: 1rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  .prep-form input:focus, .prep-form textarea:focus { outline: none; border-color: var(--gold); }
+  .prep-form textarea { min-height: 120px; resize: vertical; }
+  .prep-form .hp-field { position: absolute; left: -9999px; opacity: 0; }
+  .prep-form button {
+    width: 100%; cursor: pointer; background: var(--gold); color: var(--bg);
+    font-family: var(--sans); font-weight: 700; font-size: 0.85rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    border: none; padding: 1rem 1.8rem; border-radius: 999px;
+    transition: opacity 0.3s ease;
+  }
+  .prep-form button:hover { opacity: 0.85; }
+  .prep-form .form-status { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; margin-top: 1rem; text-align: center; }
+  .prep-form .form-status.ok { color: var(--teal); }
+  .prep-form .form-status.err { color: #c46a5a; }
   .back {
     display: inline-block;
     margin-top: 3rem;
@@ -141,9 +169,59 @@
 
     <div class="divider"></div>
 
+    <h2 style="font-family:var(--sans);font-size:1.15rem;font-weight:600;">Skip the inbox — tell me now what you&rsquo;re stuck on</h2>
+    <p class="prep-sub">This is the prep brief, self-serve. Ten minutes now, and our session starts at full speed.</p>
+
+    <form class="prep-form" id="prep-capture">
+      <input type="text" name="name" placeholder="Name" autocomplete="name">
+      <input type="email" name="email" placeholder="Email you booked with" required autocomplete="email">
+      <textarea name="message" placeholder="The thing you&#39;re stuck on — the opportunity, the half-built idea, the build/buy/bolt question. In your own words." required></textarea>
+      <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+      <button type="submit">Send my prep notes →</button>
+      <p class="form-status" id="form-status"></p>
+    </form>
+
+    <div class="divider"></div>
+
     <p class="lede" style="margin-bottom:0; font-size: 0.9rem;">Need to move it? Reply to your confirmation email and we&rsquo;ll find a new time. No forms, no friction.</p>
 
     <a class="back" href="https://taiosborne.com">&larr; Back to taiosborne.com</a>
   </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('prep-capture');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var fd = new FormData(form);
+    status.className = 'form-status';
+    status.textContent = 'Sending…';
+    fetch('https://nova-96b2192a.base44.app/functions/captureLead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: fd.get('name') || '',
+        email: fd.get('email') || '',
+        message: fd.get('message') || '',
+        website: fd.get('website') || '',
+        source: 'Strategy Session prep (thanks page)'
+      })
+    }).then(function(r) { return r.json(); }).then(function(d) {
+      if (d.ok) {
+        form.reset();
+        status.className = 'form-status ok';
+        status.textContent = '✓ Got it. See you at the session.';
+      } else {
+        status.className = 'form-status err';
+        status.textContent = d.error || 'Something went wrong — email humantics@taiosborne.com instead.';
+      }
+    }).catch(function() {
+      status.className = 'form-status err';
+      status.textContent = 'Network hiccup — try again, or email humantics@taiosborne.com.';
+    });
+  });
+});
+</script>
 </body>
 </html>
