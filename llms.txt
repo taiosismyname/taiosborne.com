@@ -1,0 +1,22 @@
+# Tai Osborne
+
+> Tai Osborne (Humantics, Charlotte, NC) fixes what AI says about your business: AI visibility audits, narrative rebuilds, and agent infrastructure. 40+ shipped systems. Working with AI since before it was a trend.
+
+## Work with Tai
+
+- [AI Visibility Diagnostic](https://buy.stripe.com/28EeVe1L33mV213bpLdQQ00): What do ChatGPT, Gemini, Perplexity, and Google currently say about your business? 90 minutes, straight answers, and a ranked fix list. $250 one-time, credited toward the Audit.
+- Narrative & Visibility Audit: the full audit of how AI systems describe your business. $950.
+- The Narrative Rebuild: correct the story, then build the infrastructure that makes the corrected story true. 3–4 weeks, $4,500.
+- Fractional Narrative Architect: ongoing visibility monitoring and monthly messaging iteration. $1,800/month, two slots.
+
+## Products and projects
+
+- [TrueTone Headshots](https://buy.stripe.com/bJe4gy3ZN33FaK9fbkeME00): AI headshots that actually get your features right. First set free, $29 one-time unlock.
+- [TimeEngine](https://github.com/taiosismyname/timeengine): A unified astrology engine (Western tropical, BaZi, solar terms, lunar, numerology) resolved in one deterministic call. Open source under AGPL-3.0.
+- [taiosborne.com](https://taiosborne.com/): Offers, projects, writing, and booking.
+
+## Contact and profiles
+
+- Email: humantics@taiosborne.com
+- [GitHub](https://github.com/Taiosismyname)
+- [Instagram](https://www.instagram.com/ba.trees/)
